@@ -59,3 +59,10 @@ CatC,Prod59-cC,10,140
 
 7 topSalesCats = LIMIT sortGrpByCatTotals 2;
 8 topSalesCats
+
+9 DESCRIBE rawSales;
+
+10 co = FOREACH rawSales GENERATE category,product,sales,total_sales_category;
+11 DUMP co;
+
+
