@@ -23,6 +23,7 @@ public class WordCount{
       }
     }
   } 
+  
   public static class IntSumReducer extends Reducer<Text IntWritable, Text, IntWritable>{
     private IntWritable result = new IntWritable();
     public void reduce(Text key, Iterable<IntWritable> values, Context context)thorws IOException, InterruptException{
@@ -34,6 +35,7 @@ public class WordCount{
       context.write(key, result);
     }
   }
+  
   public static void main(String[] args) throws Exception{
     Configuration conf = new Configuration();
     Job job = Job.getInstance(conf,"WordCount");
