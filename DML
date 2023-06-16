@@ -1,0 +1,24 @@
+1st execute these commadns in hive.
+
+SET hive.support.concurrency = true;
+SET hive.txn.manager = org.apache.hadoop.hive.qllockmgr.obTxnManager;
+SET hive.enforce.bucketing = true;
+SET hive.exec.dynamic.partition.mode = nostrict;
+SET hive.compactor.worker.threads =1 ;
+SET hive.compactor.intiator.on = true;
+
+CREATE TABLE
+------------
+create table student_table(rollno int, name string, cgpa float) partitioned by (adimission_date date) clustered by (roll no) into 3 buckets stored as orc tblproperties('transactional' = "true")
+
+INSERT into
+----------
+insert into student_table partition(admission_date='2020-04-01') values(120,'greyman',9.8);
+
+UPDATE 
+------
+update student_table set cgpa_10 where rollno = 3;
+
+DELETE
+------
+delete from student_table where rollno = 3;
