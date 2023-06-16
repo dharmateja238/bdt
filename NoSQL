@@ -1,0 +1,35 @@
+CREATE
+-------------
+create 'st_percentage', 'Rollno', 'Percentage'
+
+DESCRIBE (or) DESC
+------------------------
+create 'st_percentage', 'Rollno', 'Percentage'
+
+INSERT INTO
+-----------
+Insert values into table: put 'st_percentage', '1001','Percentage:upto7thsem','98'
+
+SCAN
+----
+scan 'st_percentage'
+
+ALTER
+-----
+alter 'st_percentage','delete'=>'percentage'
+
+DISABLE
+-------
+disable ‘st_percentage’
+
+ENABLE
+------
+enable ‘st_percentage’
+
+DROP
+----
+drop 'st_percentage'
+
+EXITS
+-----
+exists 'st_percentage'
