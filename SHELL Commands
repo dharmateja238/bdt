@@ -1,0 +1,12 @@
+hadoop version
+
+hadoop fs -ls /
+hadoop fs -mkdir /newDataFile
+hadoop fs -put /localfile1 /filefromlocal
+hadoop fs -copyFromLocal /test1 /newDataFile/copytest
+hadoop fs -cat /newDataFile/copytext.txt
+hadoop fs -get /testfile /copyfromhadoop
+hadoop fs -mv /DR1 /DataFile
+hadoop fs -cp /newDataFile/file1 /dataFile
+hadoop fs -help
+hadoop fs -rmdir /user/hadoop/emptydir
