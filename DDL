@@ -1,0 +1,23 @@
+CREATE TABLE
+-------
+CREATE TABLE Employee (empid INT, empname STRING, empcity STRING);
+describe Employee;
+
+INSERT INTO 
+-------
+insert into Employee values (200,’Sreedhar’,’Kurnool’);
+
+SELECT TABLE
+------
+select * from Employee;
+
+ALTER TABE
+-----
+ALTER TABLE Employee RENAME to GPREmployee;
+desc GPREmployee;
+ALTER TABLE GPREmployee ADD COLUMNS (Sal BIGINT);
+
+DROP TABLE
+---------
+DROP TABLE GPREmployee;
+desc GPREmployee;
